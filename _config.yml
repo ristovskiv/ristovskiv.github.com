@@ -1,0 +1,29 @@
+# Site settings
+title: 'Ristovski Vlatko'
+description: "I'm far from being god, but I work god damn hard"
+url: 'http://ristovskiv.github.io' 
+baseurl: '/'
+# google_analytics: 'UA-XXXXXX-X'
+
+author:
+  name: 'Vlatko Ristovski'
+  email: ristovski.vlatko234@gmail.com
+  twitter_username: RistovskiV
+  github_username:  ristovskiv
+  linkedin_username: ristovskiv
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: pygments
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+gems: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
