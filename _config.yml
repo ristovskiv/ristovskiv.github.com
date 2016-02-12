@@ -3,7 +3,7 @@ title: 'Ristovski Vlatko'
 description: "I'm far from being god, but I work god damn hard"
 url: 'http://ristovskiv.github.io' 
 baseurl: '/'
-# google_analytics: 'UA-XXXXXX-X'
+google_analytics: 'UA-73706419-1'
 
 author:
   name: 'Vlatko Ristovski'
