@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Recovering lost commits and deleted branches with git reflog"
-date:   2016-01-15 15:04:23
 categories: [git]
 tags: [git]
 ---
@@ -32,11 +31,11 @@ I did mention before, and I want to emphasize it again, reflog only tracks the l
 
 ## Branch in distress
 
-Let's see another frequent real world case where we can witness the power of reflog. [GRRM][george-martin] assigned us to write the story for one of his characters from "Game of Thrones", Tyrion Lannister. So we create a separate branch called tyrion-lannister and we start working and commiting. 
+Let's see another frequent real world case where we can witness the power of reflog. [GRRM][george-martin] wanted us to help him and assigned us to write the remaining story for one of his characters from "Game of Thrones", Tyrion Lannister. So we create a separate branch called tyrion-lannister and we start working and commiting. 
 
 ![tyrion-lannister-branch](https://monosnap.com/file/gDu8GjoisrB80MNm5MmZzb5KyjWB2e.png "git log --pretty=oneline")
 
-Suddenly GRRM decides to kill him and all of our additional work becomes useless, so we don't need our branch anymore even though our commits are not merged with master and we delete him by checking out to master first `git checkout master` and then running `git branch -D tyrion-lannister`. But the script was leaked before being published and the readers and viewers of the show aren't happy, in fact they are furious. GRRM changes his mind and wants us to continue with our work. But wait...our whole work was on the tyrion-lannister branch and we didn't merge that branch anywhere. Reflog to the rescue. As we mentioned before git never deletes commits, he just deleted the branch. So if we can find the latest commit from that branch we can recreate the branch. So to find the last commit from that branch we need to see the reflog
+Suddenly GRRM decides to kill our character and all of our additional work becomes useless, so we don't need our branch anymore even though our commits are not merged with master and we delete it by checking out to master first `git checkout master` and then running `git branch -D tyrion-lannister`. But the script was leaked before being published and the readers and viewers of the show aren't happy, in fact they are furious. GRRM changes his mind and wants us to continue with our work. But wait...our whole work was on the tyrion-lannister branch and we didn't merge that branch anywhere. Reflog to the rescue. As we mentioned before git never deletes commits, he just deleted the branch. So if we can find the latest commit from that branch we can recreate it. To find the last commit from that branch we need to see the reflog
 
 ![git-reflog-branch-deleted](https://monosnap.com/file/NOhKq8qfEURyFrEv4JJ3zWvaX5Sc4K.png "git reflog")
 
