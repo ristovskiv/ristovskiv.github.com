@@ -3,7 +3,7 @@ layout: post
 title:  "Recovering lost commits and deleted branches with git reflog"
 categories: [git]
 tags: [git]
-image: git-reflog.png
+image: git-reflog-tool.png
 ---
 
 Ever read a tutorial or used instructions from a friend about "deleting" a commit from a git history. They most likely use the `reset` tool for that purpose and of course they mention that using reset is dangerous. Well in a way it is, if you use it on commits that are already stored on some remote repository, but that is a topic for another day. But what if I told you the reset tool is not that dangerous as you think, what if I told you there is a way that you can control it, what if I told you there is a way that you can restore a commit that you've accidentally "deleted", and last but not least
