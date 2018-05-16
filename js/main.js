@@ -18,7 +18,7 @@ $(document).ready(function () {
     $('.panel-cover').addClass('panel-cover--collapsed')
   }
 
-  if (window.location.pathname !== {% if site.baseurl %} '{{ site.baseurl }}' {% else %} '/' {% endif %} && window.location.pathname !== '{{ "/index.html" | relative_url }}') {
+  if (!window.location.pathname.match(/^\/(\bindex\b(\.\bhtml\b)?)?$/)) {
     $('.panel-cover').addClass('panel-cover--collapsed')
   }
 
