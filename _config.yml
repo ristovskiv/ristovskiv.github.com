@@ -1,8 +1,7 @@
 # Site settings
 title: 'Ristovski Vlatko'
 description: "Background of a street dude, mind of a scholar"
-url: 'http://ristovskiv.github.io' 
-baseurl: '/'
+url: 'http://ristovskiv.github.io'
 google_analytics: 'UA-73706419-1'
 
 author:
