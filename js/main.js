@@ -18,6 +18,8 @@ $(document).ready(function () {
     $('.panel-cover').addClass('panel-cover--collapsed')
   }
 
+  // this check basically depends that site.baseurl is not set which defaults to empty string
+  // if you change the site.baseurl this needs to be change as well
   if (!window.location.pathname.match(/^\/(\bindex\b(\.\bhtml\b)?)?$/)) {
     $('.panel-cover').addClass('panel-cover--collapsed')
   }
